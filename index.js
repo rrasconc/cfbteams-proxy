@@ -47,6 +47,7 @@ app.get("/api/conferences", (request, response) => {
     });
 });
 
-const PORT = 3001;
-app.listen(PORT);
-console.log("server running on port " + PORT);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Our app is running on port ${PORT}`);
+});
